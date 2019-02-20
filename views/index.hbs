@@ -1,0 +1,11 @@
+{{#if links}}
+<ul>
+  {{#each links }}
+  <li>
+    <a href="/link/{{id}}">{{title}}</a> - {{link}}
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
+
+<a href="/link/new">Publish an New Link</a>
