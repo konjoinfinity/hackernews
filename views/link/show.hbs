@@ -1,12 +1,15 @@
 <div class="container">
 <h3>{{link.title}}</h3>
 <p>{{link.description}}</p>
-<p>Link:<a href="{{link.link}}">{{link.link}}</a></p>
-<p>Date: {{link.date}}</p>
+<p><i class="material-icons">link</i><a href="{{link.link}}">{{link.link}}</a></p>
+<p><i class="material-icons">date_range</i>{{link.date}}</p>
 
+<i class="material-icons">edit</i>
 <button type="button" name="edit"><a href="/link/{{link.id}}/edit">Edit</a></button>
 
+
 <form action="/link/{{link.id}}?_method=DELETE" method="post">
+<i class="material-icons">delete</i>
   <input type="submit" value="Delete">
 </form>
 </div>

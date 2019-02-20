@@ -1,13 +1,29 @@
 <div class="container">
+  <div class="row">
+      <div class="col s12 m12">
+        <div class="card blue lighten-5">
+          <div class="card-content white-black center">
+            <span class="card-title"><i class="material-icons">add_circle_outline</i>
+            <button type="button" name="publish"><a href="/link/new">Publish an New Link</a></button></span>
+          </div>
+        </div>
+      </div>
+    </div>
 {{#if links}}
 <ul>
   {{#each links }}
   <li>
-    <a href="/link/{{id}}">{{title}}</a> - {{link}}
+    <div class="row">
+        <div class="col s12 m12">
+          <div class="card blue lighten-5">
+            <div class="card-content white-black center">
+              <span class="card-title"><a href="/link/{{id}}">{{title}}</a> - {{link}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
   </li>
   {{/each}}
 </ul>
 {{/if}}
-
-<button type="button" name="publish"><a href="/link/new">Publish an New Link</a></button>
 </div>
