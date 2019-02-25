@@ -1,0 +1,25 @@
+<div class="container">
+<h2>Log In</h2>
+<!--If there is an error, alerts the red danger with the printed error-->
+{{#if error}}
+<p class="alert alert-danger">{{error}}</p>
+{{/if}}
+<!--Checks to see if there is info and displays the info as a yellow warning-->
+{{#if info}}
+<p class="alert alert-warning">{{info}}</p>
+{{/if}}
+
+<form action="/login" method="post">
+  <p class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" class="form-control">
+  </p>
+  <p class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" class="form-control">
+  </p>
+  <p class="form-group">
+    <input type="submit" value="Log In" class="btn amber darken-1">
+  </p>
+</form>
+</div>

@@ -1,6 +1,6 @@
 //Each link should have a url, title, brief description and the date it was posted.
 
-const Link = require("../models/index");
+const { Link } = require("../models/index");
 
 module.exports = {
   new: function(req, res) {

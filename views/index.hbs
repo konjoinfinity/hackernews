@@ -1,14 +1,8 @@
-<div class="container">
-  <div class="row">
-      <div class="col s12 m12 center">
-        <div class="card blue lighten-5">
-          <div class="card-content white-black center">
-            <span class="card-title"><i class="material-icons">add_circle_outline</i>
-            <button type="button" name="publish"><a href="/link/new">Publish an New Link</a></button></span>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--If user login success, alerts success message-->
+{{#if success}}
+<p class="alert alert-success">{{success}}</p>
+{{/if}}
+
 {{#if links}}
 <ul>
   {{#each links }}

@@ -11,6 +11,28 @@
     <nav>
     <div class="nav-wrapper amber darken-1">
       <a href="/#" class="brand-logo left"><i class="material-icons">view_list</i>Hacker News</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="#"> Welcome {{user.username}}</a>
+        </li>
+        <li class="nav-item">
+        <i class="material-icons">add_circle_outline</i>
+        </li>
+        <li class="nav-item"><a href="/link/new">New Link</a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Log Out</a>
+        </li>
+        <!--If not, displays only this portion-->
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+        {{/if}}
     </div>
   </nav>
     {{{ body }}}

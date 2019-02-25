@@ -1,0 +1,21 @@
+<div class="container">
+<h2>Sign Up</h2>
+<!--Checks to see if there is an error and displays the danger alert message-->
+{{#if error}}
+<p class="alert alert-danger">{{error}}</p>
+{{/if}}
+
+<form action="/signup" method="post">
+  <p class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" class="form-control">
+  </p>
+  <p class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" class="form-control">
+  </p>
+  <p class="form-group">
+    <input type="submit" value="Sign Up" class="btn amber darken-1">
+  </p>
+</form>
+</div>
