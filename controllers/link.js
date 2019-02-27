@@ -28,25 +28,17 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    const { title, description, link } = req.body;
-
-    Link.findOneAndUpdate(
-      req.params.id,
-      {
-        title,
-        description,
-        link
-      },
-      {
-        runValidators: true
-      }
-    )
-      .then(link => {
+    Link.findOne({
+      _id: req.params.id
+    }).then(link => {
+      link.title = req.body.title;
+      link.description = req.body.description;
+      link.link = req.body.link;
+      link.save(err => {
+        if (err) return res.status(500).send(err);
         res.redirect(`/link/${link._id}`);
-      })
-      .catch(err => {
-        console.log(err);
       });
+    });
   },
   delete: function(req, res) {
     Link.remove({ _id: req.params.id }).then(link => {
