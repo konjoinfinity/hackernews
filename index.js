@@ -55,9 +55,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(require("./routes/index"));
-
+console.log("konjo");
 app.set("port", process.env.PORT || 3001);
-
+console.log("port");
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
