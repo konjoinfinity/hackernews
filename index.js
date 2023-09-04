@@ -55,7 +55,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(require("./routes/index"));
-console.log("konjo");
+console.log("routes");
 app.set("port", process.env.PORT || 3001);
 console.log("port");
 app.listen(app.get("port"), () => {
